@@ -4,8 +4,10 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 // Import helper code
 import Settings from '../constants/Settings';
-import { RoiGetPeople } from '../utils/Api';
+//import { RoiGetPeople } from '../utils/Api';
+import { RoiGetPeople } from '../utils/RoiApi';
 import { PopupOk } from "../utils/Popup";
+//import { PopupOk } from "../utils/flashMessage";
 
 // Import styling and components
 import { TextParagraph, TextH1, TextH2 } from "../components/StyledText";
