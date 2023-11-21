@@ -17,22 +17,47 @@ export default function HomeScreen(props) {
     props.navigation.replace('Root', {screen: 'Help'});
   }
 
+  function showViewPeople() {
+    props.navigation.replace('Root', {screen: 'People'});
+  }
+
   return (
     <SafeAreaView style={Styles.safeAreaView}>
       <ScrollView style={Styles.container} contentContainerStyle={Styles.contentContainer}>
-        
-        <TextH1>This is the home screen</TextH1>
 
-        <TextParagraph>Here is some sample text for the home screen.</TextParagraph>
+        {/* logo */}
 
-        <TextParagraph>There is no place like 127.0.0.1</TextParagraph>
+        <View style ={Styles.homeLogoContainer}>
+          <Image 
+          source={require("../assets/images/roi-logo.jpg")}
+          style={Styles.homeLogo}
+          />
+        </View>
+
+        {/* main heading */}
+       
         
-        <View style={{alignItems: 'center', justifyContent: 'center', marginVertical: 40}}>
+        <View>
+          <Text style={Styles.homeHeading}>ROI HR Management System </Text>
+          <Text style={Styles.homeHeading}> </Text>
+        </View>
+        
+        {/* buttons */}
+
+        <View style={Styles.homeButtonContainer}>
           <MyButton
-            text="Show help screen"
+            text="View people"
             type="major"      // default*|major|minor
             size="large"      // small|medium*|large
+            onPress={showViewPeople}
+            buttonStyle={Styles.homeButton}
+          />
+          <MyButton
+            text="Help"
+            type="default"      // default*|major|minor
+            size="large"      // small|medium*|large
             onPress={showHelp}
+            buttonStyle={Styles.homeButton}
           />
         </View>
       </ScrollView>

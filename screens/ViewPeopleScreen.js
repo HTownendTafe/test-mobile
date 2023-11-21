@@ -60,8 +60,37 @@ export default function ViewPeopleScreen(props) {
 
       // Create an output view for each item
       return (
-        <View key={p.id}>
-          <TextParagraph>{p.name}</TextParagraph>
+        <View key={p.id} style={Styles.personListItem}>
+          <View style={Styles.personListItemDetails}>
+            <TextParagraph style={Styles.personListItemName}>{p.name}</TextParagraph>
+            {/* <TextParagraph>{p.department ? p.department.name : "N/A"}</TextParagraph> */}
+            <TextParagraph style={Styles.personListItemText}>{p.department?.name ?? "N/A"}</TextParagraph>          
+            <TextParagraph style={Styles.personListItemText}>{p.phone}</TextParagraph>
+            </View>
+
+          <View style={Styles.personListItemButtons}>
+            <MyButton 
+            text="Info"
+            type="major"      // default*|major|minor
+            size="small"      // small|medium*|large
+            buttonStyle={Styles.personListItemButton}
+            textStyle={Styles.personListItemButtonText}
+            />
+            <MyButton 
+            text="Edit"
+            type="default"      // default*|major|minor
+            size="small"      // small|medium*|large
+            buttonStyle={Styles.personListItemButton}
+            textStyle={Styles.personListItemButtonText}
+            />
+            <MyButton 
+            text="Delete"
+            type="minor"      // default*|major|minor
+            size="small"      // small|medium*|large
+            buttonStyle={Styles.personListItemButton}
+            textStyle={Styles.personListItemButtonText}
+            />
+          </View>
         </View>
       )
 
@@ -93,7 +122,7 @@ export default function ViewPeopleScreen(props) {
           
         <TextH1 style={{marginTop:0}}>Listing all people</TextH1>
 
-        <View>
+        <View style={Styles.personList}>
           {displayPeople()}
         </View>
 

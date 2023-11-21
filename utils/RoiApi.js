@@ -3,6 +3,7 @@ import { getRequest, deleteRequest, postRequest, putRequest, getRequestWithCachi
 // Root URL for the API backend
 const apiUrl = 'http://localhost:5062/api';
 const useCache = true;
+//cache.ttlMinutes = 60;
 
 // Get all departments
 export function RoiGetDepartments() {
@@ -22,21 +23,29 @@ export function RoiGetDepartments() {
 }
 
 // Get all people
+//export function RoiGetPeople() {
+  // Call API endpoint: GET /People
+//  console.log(`${apiUrl}/People`);
+//  if (useCache) {
+//    return getRequestWithCaching(`${apiUrl}/People`).then((response) => {
+//      // If request/response is successful, return JSON data
+//      return response;
+//    });
+//  } else {
+//    return getRequest(`${apiUrl}/People`).then((response) => {
+//      // If request/response is successful, return JSON data
+//      return response;
+//    });
+//  }
+//}
 export function RoiGetPeople() {
   // Call API endpoint: GET /People
-  console.log(`${apiUrl}/People`);
-  if (useCache) {
-    return getRequestWithCaching(`${apiUrl}/People`).then((response) => {
-      // If request/response is successful, return JSON data
-      return response;
-    });
-  } else {
-    return getRequest(`${apiUrl}/People`).then((response) => {
-      // If request/response is successful, return JSON data
-      return response;
-    });
-  }
+  return getRequest(`${apiUrl}/People`).then((response) => {
+    // If request/response is successful, return JSON data
+    return response;
+  });
 }
+
 
 // Get person
 export function RoiGetPerson(id) {
@@ -47,7 +56,8 @@ export function RoiGetPerson(id) {
       // If request/response is successful, return JSON data
       return response;
     });
-  } else {
+  } 
+  else {
     return getRequest(`${apiUrl}/People/${id}`).then((response) => {
       // If request/response is successful, return JSON data
       return response;
