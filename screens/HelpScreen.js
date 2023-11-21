@@ -62,23 +62,35 @@ export default function HelpScreen(props) {
             />
         </View>
 
-          <TextH2>Sample content</TextH2>
+          <TextH2>Main tab navigation</TextH2>
 
-          <TextParagraph>Here is some sample content for a help topic (or just any set of static text for the screen).</TextParagraph>
+          <TextParagraph>The main navigation bar is at the bottom of the app and shows the major screens/functions.</TextParagraph>
+          <TextParagraph>Each tab links to an important screen.</TextParagraph>
 
-          <TextH2>Custom components</TextH2>
+          <TextH3>Actions:</TextH3>
 
-          <TextParagraph>You can add all of your own content and structure for these screens, making use of the customised text components from components/StyledText.</TextParagraph>
+          <TextListItem>Home - The landing page of the app.</TextListItem>
+          <TextListItem>View People - List all the people</TextListItem>
+          <TextListItem>Add Person - Add a new person</TextListItem>
+          <TextListItem>Help - View this help content</TextListItem>
+          
+          <TextH2>Home Screen</TextH2>
+          <TextParagraph>The home screen of the application that user sees when first opening the app.</TextParagraph>
 
-          <TextH3>Custom text components:</TextH3>
+          <TextH2>Help Screen</TextH2>
+          <TextParagraph>The help screen displays a list of helpful content about the app.</TextParagraph>
 
-          <TextListItem>MonoText - Monospaced font (Space Mono)</TextListItem>
-          <TextListItem>TextH1 - heading 1</TextListItem>
-          <TextListItem>TextH2 - heading 2</TextListItem>
-          <TextListItem>TextH3 - heading 3</TextListItem>
-          <TextListItem>TextParagraph - paragraph</TextListItem>
-          <TextListItem>TextListItem - bullet list item</TextListItem>
-          <TextListItem>TextLabel - form label (inline with input)</TextListItem>
+          <TextH2>View all Screen</TextH2>
+          <TextParagraph>The view all people screen displays a list of all the peope.</TextParagraph>
+
+          <TextH2>View person Screen</TextH2>
+          <TextParagraph>View person screen displays the info of a particular person.</TextParagraph>
+
+          <TextH2>Add person Screen</TextH2>
+          <TextParagraph>Add person screen with buttons and text boxes to input persons details.</TextParagraph>
+
+          <TextH2>Edit person Screen</TextH2>
+          <TextParagraph>Edit person screen which displays a particular person info with the ability to edit them.</TextParagraph>
 
           <TextH2>Wanna go home?</TextH2>
 
