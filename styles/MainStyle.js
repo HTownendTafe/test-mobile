@@ -214,7 +214,7 @@ export default StyleSheet.create({
 
   helpButtonContainer: {
     flexDirection: 'row', //column
-    justifyContent: 'flex-start',
+    justifyContent: 'center',
     paddingVertical: 5,
   },
   helpButton: {
