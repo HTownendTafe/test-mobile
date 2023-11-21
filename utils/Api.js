@@ -1,9 +1,10 @@
 import NetInfo from '@react-native-community/netinfo';
-import cache from './Caching';
+//import cache from './Caching';
+import cache from 'react';
 
 // Root URL for the API backend
 // const apiUrl = "https://localhost:7215/api/v1";
-//const apiUrl = 'http://localhost:5062/api';
+const apiUrl = 'http://localhost:5062/api';
 // 5219 5299 http://localhost
 // Use caching for semi-offline operation - set high TTL (time to live)
 cache.ttlMinutes = 60;
