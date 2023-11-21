@@ -77,7 +77,7 @@ export default function ViewPeopleScreen(props) {
             textStyle={Styles.personListItemButtonText}
             />
             <MyButton 
-            text="Edit"
+            text="Edit" 
             type="default"      // default*|major|minor
             size="small"      // small|medium*|large
             buttonStyle={Styles.personListItemButton}

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Image, Text, View, ScrollView } from 'react-native';
+import { Image, Text, View, ScrollView, Pressable} from 'react-native';
 import { SafeAreaView } from "react-native-safe-area-context";
 
 // Import helper code
@@ -12,6 +12,14 @@ import { TextH1, TextParagraph } from "../components/StyledText";
 
 
 export default function HomeScreen(props) {
+
+  //State management
+  const [isLogoColour, setIsLogoColour] = React.useState(true)
+
+  //toggle the value of isLogoColour (true/false)
+  function toggleLogo(){
+    setIsLogoColour(!isLogoColour)
+  }
 
   function showHelp() {
     props.navigation.replace('Root', {screen: 'Help'});
@@ -28,10 +36,17 @@ export default function HomeScreen(props) {
         {/* logo */}
 
         <View style ={Styles.homeLogoContainer}>
-          <Image 
-          source={require("../assets/images/roi-logo.jpg")}
-          style={Styles.homeLogo}
-          />
+          <Pressable onPress={toggleLogo}>
+            <Image 
+            // conditon ? true : false
+            source={
+              isLogoColour 
+                ? require("../assets/images/roi-logo.jpg") 
+                : require("../assets/images/roi-logo-monochrome.jpg")
+            }
+            style={Styles.homeLogo}
+            />
+          </Pressable>
         </View>
 
         {/* main heading */}
