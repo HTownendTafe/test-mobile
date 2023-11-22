@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { View, ScrollView } from 'react-native';
 import { SafeAreaView } from "react-native-safe-area-context";
-import { showMessage } from "../utils/flashMessage";
-import NetInfo from "@react-native-community/netinfo"
+import { showMessage } from "react-native-flash-message";
+import NetInfo from "@react-native-community/netinfo";
 
 // Import helper code
 import Settings from '../constants/Settings';
@@ -102,17 +102,30 @@ export default function ViewPeopleScreen(props) {
   function displayConnectionMessage() {
     console.log('displayConnectionMessage');
     // Get network connection status
-    NetInfo.fetch().then((status) => {
+    NetInfo.fetch().then(status => {
       // Check if not connected to the Internet
       if (!status.isConnected) {
         // Display the flash message
-        infoMessage('No internet connection', 'You will only see cached data until you \nhave an active internet connection again');
+        //infoMessage('No internet connection', 'You will only see cached data until you \nhave an active internet connection again');
+        showMessage({
+          message: "no internet connection",
+          description: "You will only see cahced data until you \nhave an active internet connection again",
+          type: "warning",
+          duration: 4000,
+          floating: true,
+          icon: "warning",
+          autoHide: true,
+
+        })
       }
     });
   }
 
   // Display all people data
   function displayPeople() {
+
+    //Display flash message when there is a connection issue
+    displayConnectionMessage()
     
     // Loop through each item and turn into appropriate output and then return the result
     return people.map(p => {

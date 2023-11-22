@@ -17,7 +17,7 @@ export default function App() {
       </NavigationContainer>
       <StatusBar style="auto" />
       {/* Global flash message component to allow banners to appear */}
-      {/* <FlashMessage position="top" /> */}
+      <FlashMessage position="top" />
     </SafeAreaProvider>
   );
 }
