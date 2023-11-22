@@ -1,5 +1,6 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import * as React from 'react';
+import AddPersonScreen from '../screens/AddPersonScreen';
 
 // Import styling and components
 import TabBarIcon from '../components/TabBarIcon';
@@ -43,6 +44,14 @@ export default function BottomTabNavigator({ navigation, route }) {
           title: 'View People',
           unmountOnBlur: true,   // Reset the screen when it loses focus (when someone navigates away from it)
           tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-people" />
+        }}
+      />
+      <BottomTab.Screen
+        name="AddPerson"
+        component={AddPersonScreen}
+        options={{
+          title: 'Add Person',
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-person-add" />,
         }}
       />
       <BottomTab.Screen

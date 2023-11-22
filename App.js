@@ -6,6 +6,7 @@ import { SafeAreaProvider } from "react-native-safe-area-context";
 // Import helpers and navigation
 import RootNavigator from './navigation/RootNavigator';
 import LinkingConfiguration from './navigation/LinkingConfiguration';
+import FlashMessage from 'react-native-flash-message';
 
 
 export default function App() {
@@ -15,6 +16,8 @@ export default function App() {
         <RootNavigator />
       </NavigationContainer>
       <StatusBar style="auto" />
+      {/* Global flash message component to allow banners to appear */}
+      {/* <FlashMessage position="top" /> */}
     </SafeAreaProvider>
   );
 }

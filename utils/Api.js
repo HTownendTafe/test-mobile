@@ -1,6 +1,6 @@
 import NetInfo from '@react-native-community/netinfo';
-//import cache from './Caching';
-import cache from 'react';
+import cache from './Caching';
+//import cache from 'react';
 
 // Root URL for the API backend
 // const apiUrl = "https://localhost:7215/api/v1";

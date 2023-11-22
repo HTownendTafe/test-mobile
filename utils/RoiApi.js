@@ -21,33 +21,44 @@ export function RoiGetDepartments() {
     });
   }
 }
+// export function RoiGetDepartments() {
+  
+//   return getRequest(`${apiUrl}/Departments`)
+//   .then((response) => {
+//     // If request/response is successful, return JSON data
+//     return response;
+//   });
+  
+// }
 
 // Get all people
-//export function RoiGetPeople() {
-  // Call API endpoint: GET /People
-//  console.log(`${apiUrl}/People`);
-//  if (useCache) {
-//    return getRequestWithCaching(`${apiUrl}/People`).then((response) => {
-//      // If request/response is successful, return JSON data
-//      return response;
-//    });
-//  } else {
-//    return getRequest(`${apiUrl}/People`).then((response) => {
-//      // If request/response is successful, return JSON data
-//      return response;
-//    });
-//  }
-//}
 export function RoiGetPeople() {
-  // Call API endpoint: GET /People
-  return getRequest(`${apiUrl}/People`).then((response) => {
-    // If request/response is successful, return JSON data
-    return response;
-  });
+  //Call API endpoint: GET /People
+ console.log(`${apiUrl}/People`);
+ if (useCache) {
+   return getRequestWithCaching(`${apiUrl}/People`).then((response) => {
+     // If request/response is successful, return JSON data
+     return response;
+   });
+ } else {
+   return getRequest(`${apiUrl}/People`).then((response) => {
+     // If request/response is successful, return JSON data
+     return response;
+   });
+ }
 }
 
+//Get all people
+// export function RoiGetPeople() {
+//   // Call API endpoint: GET /People
+//   return getRequest(`${apiUrl}/People`)
+//     .then((response) => {
+//     // If request/response is successful, return JSON data
+//     return response;
+//   });
+// }
 
-// Get person
+//Get person
 export function RoiGetPerson(id) {
   // Call API endpoint: GET /Person/{id}
   console.log(`${apiUrl}/People/${id}`);
@@ -65,9 +76,20 @@ export function RoiGetPerson(id) {
   }
 }
 
+//Get person
+// export function RoiGetPerson(id) {
+
+//   return getRequest(`${apiUrl}/People/${id}`)
+//   .then((response) => {
+//     // If request/response is successful, return JSON data
+//     return response;
+//   });
+  
+// }
+
 // Delete person
 export function RoiDeletePerson(id) {
-  // Call API endpoint: DELETE /Person/{id}
+  // Call API endpoint: DELETE /People/{id}
   return deleteRequest(`${apiUrl}/People/${id}`, { id }).then((response) => {
     // If request/response is successful, return true (no data in response)
     return true;
