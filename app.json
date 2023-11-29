@@ -20,7 +20,9 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.roi.roifrontend",
@@ -36,6 +38,12 @@
     },
     "web": {
       "favicon": "./assets/images/favicon.png"
+    },
+    "owner": "hmtownend",
+    "extra": {
+      "eas": {
+        "projectId": "1d243dfe-ba57-4368-9c68-0017f6249994"
+      }
     }
   }
 }

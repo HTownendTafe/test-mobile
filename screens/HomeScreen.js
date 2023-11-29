@@ -75,6 +75,12 @@ export default function HomeScreen(props) {
             buttonStyle={Styles.homeButton}
           />
         </View>
+
+        <View style={{ flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginTop: 20 }}>
+          <Text style={{ color: 'lightgray', fontSize: 14 }}>Developed by</Text>
+          <Text style={{ fontSize: 18 }}>Harrison Townend</Text>
+        </View>
+
       </ScrollView>
     </SafeAreaView>
   );
