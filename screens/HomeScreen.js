@@ -53,7 +53,7 @@ export default function HomeScreen(props) {
        
         
         <View>
-          <Text style={Styles.homeHeading}>ROI HR Management System </Text>
+          <Text style={Styles.homeHeading}>HR Management System </Text>
           <Text style={Styles.homeHeading}> </Text>
         </View>
         
